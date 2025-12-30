@@ -1,0 +1,34 @@
+
+:host {
+  position: fixed;
+  inset: 0;
+  z-index: -1; /* NÃO precisa ser -1 */
+  pointer-events: none;
+}
+.sky {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: radial-gradient(ellipse at bottom, #0d1b2a, #000);
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(120vh) translateX(20vw);
+  }
+}

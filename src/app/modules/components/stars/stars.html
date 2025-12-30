@@ -1,0 +1,19 @@
+<div class="sky">
+
+
+  <div
+    class="star"
+    *ngFor="let star of stars"
+    [ngStyle]="{
+      left: star.left,
+      top: star.top,
+      width: star.size,
+      height: star.size,
+      animationDuration: star.duration,
+      animationDelay: star.delay,
+      opacity: star.opacity,
+      filter: 'blur(' + star.blur + ')'
+    }"
+  ></div>
+</div>
+
